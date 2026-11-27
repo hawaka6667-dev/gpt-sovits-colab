@@ -8,7 +8,7 @@ Optimized Google Colab notebook for running **GPT-SoVITS** on Tesla T4 (16 GB VR
   - Pinned compatibility fixes (`torch==2.11.0+cu126`, `torchaudio==2.11.0+cu126`, `fastapi==0.115.12`, `starlette<0.47.0`).
   - Google Drive workspace caching (`outputs`, `ref_audios`, `weights_backup`, `hf_cache`).
   - Live HTML progress bar and per-stage execution timing.
-  - Form-selectable launch modes defaulting to `inference_webui.py zh_CN`.
+  - Form-selectable launch modes (`inference_webui.py`, `inference_webui_fast.py`, `webui.py`, `tools/uvr5/webui.py`, `tools/subfix_webui.py`), defaulting to `inference_webui.py zh_CN`.
 
 ## Quick Start
 
