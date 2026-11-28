@@ -4,7 +4,7 @@ Optimized Google Colab notebook for running **GPT-SoVITS** (`v2Pro` / `v2ProPlus
 
 ## Files
 
-- `Colab_WebUI_Optimized_v0.2.1.ipynb`: FastBoot Colab notebook featuring:
+- `Colab_WebUI_Optimized.ipynb` (`v0.2.2`): FastBoot Colab notebook featuring:
   - Lightweight `condacolab.install()` (Miniconda instead of 1 GB Anaconda3).
   - Single-pass `PIP_CONSTRAINT` pinning (`torch==2.11.0+cu126`, `torchaudio==2.11.0+cu126`, `fastapi==0.115.12`, `starlette<0.47.0`).
   - Selective `v2Pro` / `v2ProPlus` model download (`v2Pro/`, `sv/`, `s1v3.ckpt`, `hubert`, `roberta`), skipping legacy `v1`/`v2` and deprecated `v3`/`v4` weights.
@@ -15,7 +15,7 @@ Optimized Google Colab notebook for running **GPT-SoVITS** (`v2Pro` / `v2ProPlus
 
 ## Quick Start
 
-1. Open [Google Colab](https://colab.research.google.com/) and upload `Colab_WebUI_Optimized_v0.2.1.ipynb`.
+1. Open [Google Colab](https://colab.research.google.com/) and upload `Colab_WebUI_Optimized.ipynb`.
 2. Switch runtime to **T4 GPU** (`Runtime -> Change runtime type`).
 3. Run **Step 1 -> Step 2A -> Step 2B -> Step 3** in order.
 4. Click the generated `https://xxxx.gradio.live` link to open the TTS WebUI.
