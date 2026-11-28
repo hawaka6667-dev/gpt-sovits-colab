@@ -1,18 +1,20 @@
 # GPT-SoVITS Colab Optimized
 
-Optimized Google Colab notebook for running **GPT-SoVITS** on Tesla T4 (16 GB VRAM).
+Optimized Google Colab notebook for running **GPT-SoVITS** (`v2` / `v2Pro` / `v2ProPlus`) on Tesla T4 (16 GB VRAM).
 
 ## Files
 
-- `Colab_WebUI_Optimized_v0.1.2.ipynb`: Pre-configured Colab notebook featuring:
-  - Pinned compatibility fixes (`torch==2.11.0+cu126`, `torchaudio==2.11.0+cu126`, `fastapi==0.115.12`, `starlette<0.47.0`).
-  - Google Drive workspace caching (`outputs`, `ref_audios`, `weights_backup`, `hf_cache`).
-  - Live HTML progress bar and per-stage execution timing.
-  - Form-selectable launch modes (`inference_webui.py`, `inference_webui_fast.py`, `webui.py`, `tools/uvr5/webui.py`, `tools/subfix_webui.py`), defaulting to `inference_webui.py zh_CN`.
+- `Colab_WebUI_Optimized_v0.2.0.ipynb`: FastBoot Colab notebook featuring:
+  - Lightweight `condacolab.install()` (Miniconda instead of 1 GB Anaconda3).
+  - Single-pass `PIP_CONSTRAINT` pinning (`torch==2.11.0+cu126`, `torchaudio==2.11.0+cu126`, `fastapi==0.115.12`, `starlette<0.47.0`).
+  - Selective `v2`-series model download (`v2`, `v2Pro`, `v2ProPlus`, `s1v3.ckpt`, `sv`, `hubert`, `roberta`), skipping deprecated `v3`/`v4` and full `4.25 GB` archive.
+  - Google Drive workspace caching (`outputs`, `ref_audios`, `weights_backup`, `hf_cache`, optional `models_v2_cache`).
+  - Compact single-card live HTML progress UI and per-stage timing summary.
+  - Form-selectable launch modes (`inference_webui.py`, `inference_webui_fast.py`, `webui.py`, `tools/uvr5/webui.py`, `tools/subfix_webui.py`).
 
 ## Quick Start
 
-1. Open [Google Colab](https://colab.research.google.com/) and upload `Colab_WebUI_Optimized_v0.1.2.ipynb`.
+1. Open [Google Colab](https://colab.research.google.com/) and upload `Colab_WebUI_Optimized_v0.2.0.ipynb`.
 2. Switch runtime to **T4 GPU** (`Runtime -> Change runtime type`).
 3. Run **Step 1 -> Step 2A -> Step 2B -> Step 3** in order.
 4. Click the generated `https://xxxx.gradio.live` link to open the TTS WebUI.
