@@ -1,14 +1,14 @@
 # GPT-SoVITS Colab Optimized
 
-Optimized Google Colab notebook for running **GPT-SoVITS** (`v2` / `v2Pro` / `v2ProPlus` & `v5turbo` / `v5dev`) on Tesla T4 (16 GB VRAM).
+Optimized Google Colab notebook for running **GPT-SoVITS** (`v2Pro` / `v2ProPlus` & `v5turbo` / `v5dev`) on Tesla T4 (16 GB VRAM).
 
 ## Files
 
-- `Colab_WebUI_Optimized.ipynb` (`v0.3.1`): FastBoot Colab notebook featuring:
+- `Colab_WebUI_Optimized.ipynb` (`v0.3.2`): FastBoot Colab notebook featuring:
   - Lightweight `condacolab.install()` (Miniconda instead of 1 GB Anaconda3).
   - Single-pass `PIP_CONSTRAINT` pinning (`torch==2.11.0+cu126`, `torchaudio==2.11.0+cu126`, `fastapi==0.115.12`, `starlette<0.47.0`).
-  - Default `v2全系 + v5` selective model download (`v2`, `v2Pro`, `v2ProPlus`, `v5turbo`, `v5dev`), skipping `v1` and deprecated `v3`/`v4` weights.
-  - Explicit `version` / `gpt_path` / `sovits_path` startup injection supporting direct switching across `v2ProPlus`, `v2Pro`, `v5turbo`, `v5dev`, and `v2`.
+  - Default `v2Pro + v5` selective model download (`v2Pro`, `v2ProPlus`, `v5turbo`, `v5dev`), skipping legacy `v1`/`v2` and deprecated `v3`/`v4` weights.
+  - Explicit `version` / `gpt_path` / `sovits_path` startup injection supporting direct switching across `v2ProPlus`, `v2Pro`, `v5turbo`, and `v5dev`.
   - Google Drive workspace caching (`outputs`, `ref_audios`, `weights_backup`, `hf_cache`, optional `models_v2pro_cache`).
   - Compact single-card live HTML progress UI and per-stage timing summary.
   - Form-selectable launch modes (`inference_webui.py`, `inference_webui_fast.py`, `webui.py`, `tools/uvr5/webui.py`, `tools/subfix_webui.py`).
